@@ -1,0 +1,5 @@
+theme-override : kantega.css
+highlight : blue
+
+logo : logo_whiteish.svg
+logo-position : bottom-right
