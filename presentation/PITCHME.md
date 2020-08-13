@@ -228,16 +228,63 @@ Note:
 - når har dere skrevet tester? før prodkode? etter? mens? 
 
 
+---
+
+### Test-drevet utvikling (TDD)
+
+Note:
+- TDD er en utviklingsmetodikk
+- vi driver utviklingen fremover ved å skrive testene først
+- høres enkelt ut, men er en helt annen måte å tenke på 
+- koden blir annerledes enn om du skriver impl.-koden først. 
+- hvorfor? Fordi du må bruke koden selv. Fører til løsere koblet kode
+- Gjort riktig senker det risiko i prosjektet, fordi testene alltid kjøres (du
+  vet om noe knekker)
+
 
 ---
 
-### TDD er en utviklingsmetodikk
+### TDD setter fokus på design 
 
 Note: 
 - Top down: design før implementasjon, helt ned på detaljnivå for funksjoner
 - Ved å skrive testen først, må du tenke gjennom akseptansekriterier (hva du
   skal oppnå) før du begynner å kode
-- sammeligne med å tegne huset før du bygger det?
+- sammeligne med å tegne huset før du bygger det
+
+
+
+---?image=https://jfiaffe.files.wordpress.com/2014/09/redgreenrefacor.png&size=35%
+
+Note:
+- bilde red/green/refactor
+- TDD red-green-refactor
+- 1. Skriv test som feiler. Den kan gjerne bruke kode som ikke finnes ennå, da
+  lager du den etterhvert som du trenger. 
+- 2. Lag en minimal implementasjon som gjør at testen(e) går gjennom
+- 3. Hvis nødvendig, forbedre eksisterende kode, både i test og produksjonskode.  
+
+
+---
+
+### Test først kjennes tregt ut i begynnelsen
+
+Note:
+- Å skrive testen først kjennes ut som feil ende å begynne i
+- Test først virker veldig tregt. Har masse av løsningen planlagt i hodet, men
+  en tanke er ikke like gjennomarbeidet som det vi tror. 
+
+
+
+---
+
+### Test først gjør kursendring enklere
+
+Note: 
+- Virkeligheten er kanskje annerledes enn vi trodde, og ved å skrive testen
+  først avsløres dette fortere enn om du skrive masse implemetnasjonskode først
+- Vanskeligere å skrive om når du allerede har gjort mye. 
+
 
 
 ---
@@ -250,16 +297,36 @@ Note:
   du har dekket oppførsel du ønsket å teste
 - Hvis du skriver tester for eksisterende kode, gå inn i koden og ødelegg slik
   at du ser at testen feiler på riktig måte
-- Når testene går gjennom (blir grønne), kan man forbedre koden (refaktorere
-  koden)
-- Denne syklusen kalles red-green-refactor
 
 
+---
 
----?image=https://jfiaffe.files.wordpress.com/2014/09/redgreenrefacor.png&size=35%
+### Implementer kun nok til å få testen til å kjøre
+
+Note: 
+- Selv om du har ideer om forbedringer, ikke gjør det før testen er grønn
+- Grønn == trygg. Når du har en fungerende implementasjon, kan du lage
+  forbedringer
+
+
+--- 
+
+### Forbedringer gjøres når alle testene kjører
+
+Note: 
+- forbedringer kan gjøres både på testkode og på produksjonskode
+- testkode utgjør lett halvparten av kodebasen! 
+- tester kan bli overflødige, slett dem! 
+
+
+---
+
+### Testkode er også kode
 
 Note:
-- ved å skrive testen først 
+- testkode har samme krav til kvalitet som produksjonskode
+- det blir mange tester, lag hjelpefunksjoner og klasser for å klare å
+  vedlikeholde dem (ingen gidder å fikse 500 steder hvis API-et endrer seg)
 
 
 ---
