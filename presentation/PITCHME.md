@@ -2,6 +2,9 @@
 # Testing og TDD
 
 Note:
+- bootcamp: serie med aktiviteter for nyutdannede nyansatte, vil foregå utover
+  høsten
+- første del handler om kodekvalitet: testing/tdd og refaktorering
 - presentasjonsrunde (navn, kontor, bakgrunn)
 - Hvorfor tester vi? (5 min)
 - Hva forbinder dere med testing? (5 min)
@@ -59,7 +62,7 @@ Note:
 public class WhatWeWantToVerifyTest {
 
     @Test
-    public void assumptionForTestAndExpectedOutcome() {
+    public void explainBusinessRuleUnderTest() {
        //Given
        ThingToTest ttt = new ThingToTest();
        Result expected = new Result().withExpectedValues();
@@ -93,7 +96,7 @@ Note:
 - test et konsept om gangen
 - lett å forstå hva testen tester og få oversikt
 - viser hvilken kode som er nødvendig for å oppnå det ene konseptet
-- letter å forstå hva som blir ødelagt når testen feiler
+- lettere å forstå hva som blir ødelagt når testen feiler
 - kortere å navngi testen
 
 
@@ -109,12 +112,37 @@ Note:
   boksen skal du ikke teste.
 - Eks: ikke test verdier på interne variabler i en klasse, kun det du får
   tilbake.
-- Dårlig eksempel: order.set(age, drink) etterfulgt av order.allowedPurchase,
-  der allowedPurchase er private member.
-- Godt eksempel: order.set(age, drink) etterfulgt av order.isValid(), der
-  isValid() er en public-metode som sjekker order.allowedPurchase-variabelen
-- Om order.allowedPurchase byttes ut med noe annet påvirkes ikke den siste
+
+
+---
+
+```
+//Nope
+@Test
+public void validAge() {
+    Order order = new Order();
+    order.set(underAge, drink);
+    assertFalse(order.isOfLegalAge);
+}
+
+//Better
+@Test
+public void mustBeAboveLegalAgeToOrderDrinks() {
+    Order order = new Order();
+    order.set(ungerAge, drink);
+    assertFalse(order.isValid());
+}
+```
+
+Note:
+- Dårlig eksempel: teste om person har lov å bestille en cocktail.
+  isOfLegalAge er en intern representasjon, implementasjonsdetalj
+- Om order.isOfLegalAge byttes ut med noe annet påvirkes ikke den siste
   testen
+- isValid() er en public-metode som sjekker order.allowedPurchase-variabelen
+- isValid() implementerer gjerne andre forretningsregler også
+- kall metodene som andre deler av koden skal konsumere (black-boks-prinsippet)
+- tester påvirker hvordan du skriver koden din 
 - Tester som tester implementasjonsdetaljer gjør kodeendring vanskelig over tid
   (gir skjør kode (brittle))
 
@@ -124,14 +152,28 @@ Note:
 
 ### En god test er dokumentasjon
 
+```
+//Nope
+@Test
+public void testNonValidIdFails() {
+    String id = "ab";
+    ...
+}
+
+//Better
+@Test
+public void idMustHaveHyphen() {
+    String id = "ab";
+}
+```
+
 Note: 
 - tester viser hvordan koden din er ment til å brukes
 - nye folk på prosjektet (evt deg selv om et halvt år) kan bruke tester til å
   sette seg inn i prosjektet
 - god navngiving på tester gir deg en kort beskrivelse av hvordan systemet
   oppfører seg
-- eksempel: testNonValidIdFails() { String id = "ab"; } vs
-  testIdWithoutHyphenIsRejected() { String id = "ab"; } (her bør det også være
+- her bør det også være
   med en test som viser hva en gyldig id er
 - mer spesifikt:
 - viser hvilke parametre som trengs for å utføre en oppgave
@@ -170,6 +212,7 @@ Note:
 
 ### Vanlige testrammeverk dere kommer borti
 
+* @size[0.6em](JUnit)
 * @size[0.6em](AssertJ)
 * @size[0.6em](Hamcrest)
 * @size[0.6em](Cucumber)
@@ -179,6 +222,12 @@ Note:
 * @size[0.6em](mocha)
 * @size[0.6em](sinon: mock-rammeverk)
 * @size[0.6em](cypress)
+
+Note:
+- OK, tester er fint, men hvordan jobber vi med tester? 
+- når har dere skrevet tester? før prodkode? etter? mens? 
+
+
 
 ---
 
@@ -211,6 +260,12 @@ Note:
 
 Note:
 - ved å skrive testen først 
+
+
+---
+
+### Demo
+
 
 ---
 
