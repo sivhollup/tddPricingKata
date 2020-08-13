@@ -233,7 +233,7 @@ Note:
 ### Test-drevet utvikling (TDD)
 
 Note:
-- TDD er en utviklingsmetodikk
+- TDD er en utviklingsmetodikk og en spesifiseringsmetodikk
 - vi driver utviklingen fremover ved å skrive testene først
 - høres enkelt ut, men er en helt annen måte å tenke på 
 - koden blir annerledes enn om du skriver impl.-koden først. 
@@ -273,6 +273,9 @@ Note:
 - Å skrive testen først kjennes ut som feil ende å begynne i
 - Test først virker veldig tregt. Har masse av løsningen planlagt i hodet, men
   en tanke er ikke like gjennomarbeidet som det vi tror. 
+- test først tvinger deg til å lære om domenet og det tekniske du skal lage før
+  du lager det
+- separerer spesifikasjon fra implementasjon
 
 
 
@@ -331,6 +334,26 @@ Note:
 
 ---
 
+### Tips
+
+Note:
+- ikke alt kan testes automatisk på en god måte
+- 100% testdekning er ikke nødvendigvis et mål
+- dekk så mye av kritisk forretningslogikk som mulig
+- hvis det blir veldig vanskelig å skrive tester eller veldig tidkrevende,
+  vurder å enten endre design eller la være å teste akkurat dette
+- tester må kjøre raskt
+- tester må være vedlikeholdbare
+- når tester feiler i etterkant er dette bra, du har LÆRT at du bryter med
+  tidligere oppfatning av hva som er riktig
+- tester skal være uavhengig av hverandre
+- Ikke vær lenge på rødt! Hvis du må lage fryktelig mye kode for å få testen til
+  å bli grønn har du kanskje bitt over for mye. Kanskje du kan teste litt og
+  litt av samme konseptet?
+
+
+---
+
 ### Demo
 
 
@@ -339,4 +362,4 @@ Note:
 ### Oppgave: Pricing Kata
 
 Note:
-- dagens oppgave
+- dagens oppgave: lage et enkelt kassesystem
