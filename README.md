@@ -22,23 +22,25 @@ Kassesystemet (en eller flere klasser) skal kunne gjøre følgende:
 * Koble sammen kasse med vareliste
 * Registrere en vare og gi rett pris for denne
 * Ignorere ukjente varer
-* Registrere
-
-The finished function(s) should be able to handle the following: 
-* Register an item (name, unit price)
-* Register an item with a discount rule (name, unit price, threshold, discount price at threshold level)
-* Connect a checkout with a set of prices 
-* Scan an item and return the correct price
-* Reject unknown item without adverse effects for already scanned items
-* Scan items that trigger a discount
-* Print a receipt with items, the amount and cost for each set of items, and a separate line at the bottom with the total sum.
+* Registrere en vare som utløser rabatt
+* Skrive ut en kvittering for varene. En linje pr vare, kostnad for varen, antall kjøpt, og en separat linje til slutt med totalsum. 
 
 
-## Solving the kata
+## Løse kataen
 
-Spend time discussing the order in which you want to proceed. You don't get to write any code in the implementation class 
-unless you have a test that covers it. Write the test first and verify that it fails before implementing the correct behaviour. 
-Refactor as you go when the need arises. 
+Bruk god tid på å diskutere hvilken rekkefølge dere skal løse de ulike kravene i, slik at dere kan få en god progresjon og 
+implementere litt og litt etterhvert som dere legger til tester. Noter ned hvilken rekkefølge dere ønsker å implementere kravene i, 
+og hvorfor dere velger denne rekkefølgen. 
 
-Write down some notes on which order you want to implement functionality, and why. We will go through the choices each group
-has made and the code, as I'm sure each group will solve the problem in a different way. 
+Dere får ikke lov å skrive noe produksjonskode før dere har en test. 
+Skriv koden i testen, og når du får en kompileringsfeil på grunn av manglende klasser eller metoder, lag rammeverket som trengs
+men la selve løsningen være til testen har feilet. Dette gjør at dere vil bytte mellom test- og implementasjonsklasse ofte. 
+
+Når dere har fungerende tester og kode kan dere refaktorere om det er nødvendig. 
+
+Dersom vi får tid går vi gjennom løsningene til de ulike gruppene for å se hvilke løsninger dere har valgt. 
+
+
+### Bakgrunn
+
+Denne kataen er løst basert på [denne](http://codekata.com/kata/kata09-back-to-the-checkout/).
