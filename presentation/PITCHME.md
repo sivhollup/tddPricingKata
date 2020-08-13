@@ -336,7 +336,7 @@ Note:
 
 ---
 
-### Pricing Kata
+### Oppgave: Pricing Kata
 
 Note:
 - dagens oppgave
