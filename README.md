@@ -28,11 +28,14 @@ Kassesystemet (en eller flere klasser) skal kunne gjøre følgende:
 
 ## Løse kataen
 
-Bruk god tid på å diskutere hvilken rekkefølge dere skal løse de ulike kravene i, slik at dere kan få en god progresjon og 
-implementere litt og litt etterhvert som dere legger til tester. Noter ned hvilken rekkefølge dere ønsker å implementere kravene i, 
-og hvorfor dere velger denne rekkefølgen. 
+### Del 1: design
 
-Dere får ikke lov å skrive noe produksjonskode før dere har en test. 
+Lag et API-design som dekker alle kravene. Diskutér hvilken rekkefølge dere skal løse de ulike kravene i, slik at dere kan
+implementere litt og litt etterhvert som dere legger til tester. Noter ned designvalg og hvorfor dere velger denne rekkefølgen. 
+
+### Del 2: implementasjon
+
+Implementér systemet ved hjelp av testdrevet utvikling. Dere får ikke lov å skrive noe produksjonskode før dere har en test!
 Skriv koden i testen, og når du får en kompileringsfeil på grunn av manglende klasser eller metoder, lag rammeverket som trengs
 men la selve løsningen være til testen har feilet. Dette gjør at dere vil bytte mellom test- og implementasjonsklasse ofte. 
 
