@@ -16,21 +16,23 @@ Prøv å implementere slik at dere legger på litt og litt funksjonalitet for hv
 
 ## Spesifikasjon
 
-Kassesystemet (en eller flere klasser) skal kunne gjøre følgende: 
+Kassesystemet skal kunne gjøre følgende: 
 * Populere en vareliste med godkjente varer. Hver vare identifiseres ved et navn, og den har i tillegg pris og rabatt
 * Utføre en handel:
   * Registrere en vare
-  * Ignorere ukjente varer
+  * Scanning av ukjente varer påvirker ikke totalsum
   * Fullføre et kjøp
   * Skrive ut en kvittering for varene. En linje pr vare, kostnad for varen, antall kjøpt, og en separat linje til slutt med totalsum. 
 
 
-## Løse kataen
+## Oppgave
 
 ### Del 1: design
 
 Lag et API-design som dekker alle kravene. Diskutér hvilken rekkefølge dere skal løse de ulike kravene i, slik at dere kan
-implementere litt og litt etterhvert som dere legger til tester. Noter ned designvalg og hvorfor dere velger denne rekkefølgen. 
+implementere litt og litt etterhvert som dere legger til tester. Noter ned designvalg, antagelser og hvorfor dere velger denne rekkefølgen.
+Lag et design som er så enkelt som mulig, slik at dere kommer lengst mulig på tiden dere har til rådighet. 
+
 
 ### Del 2: implementasjon
 
