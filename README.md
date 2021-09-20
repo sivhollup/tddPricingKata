@@ -1,6 +1,6 @@
 # Kata: Kassesystem
 
-Jobb i par når dere løser denne. 
+Jobb i grupper på ca tre personer når dere løser denne. 
 
 Du skal bygge et enkelt kassesystem som kan scanne varer. En vare har et navn, en pris. I tillegg kan varen har en rabatt, der du oppgir 
 et antall du må kjøpe for at rabatten skal slå inn, og en rabatt i prosent. Varer skal kunne scannes, og scanne-metoden 
@@ -17,13 +17,12 @@ Prøv å implementere slik at dere legger på litt og litt funksjonalitet for hv
 ## Spesifikasjon
 
 Kassesystemet (en eller flere klasser) skal kunne gjøre følgende: 
-* Registrere en eller flere varer gitt ved navn og pris på en enhet
-* Registrere en eller flere varer med rabatt, gitt ved navn, pris, antall enheter som må kjøpes for at rabatten skal slå inn, samt rabatt i prosent
-* Koble sammen kasse med vareliste
-* Registrere en vare og gi rett pris for denne
-* Ignorere ukjente varer
-* Registrere en vare som utløser rabatt
-* Skrive ut en kvittering for varene. En linje pr vare, kostnad for varen, antall kjøpt, og en separat linje til slutt med totalsum. 
+* Populere en vareliste med godkjente varer. Hver vare identifiseres ved et navn, og den har i tillegg pris og rabatt
+* Utføre en handel:
+  * Registrere en vare
+  * Ignorere ukjente varer
+  * Fullføre et kjøp
+  * Skrive ut en kvittering for varene. En linje pr vare, kostnad for varen, antall kjøpt, og en separat linje til slutt med totalsum. 
 
 
 ## Løse kataen
