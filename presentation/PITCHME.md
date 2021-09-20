@@ -2,10 +2,6 @@
 # Testing og TDD
 
 Note:
-- bootcamp: serie med aktiviteter for nyutdannede nyansatte, vil foregå utover
-  høsten
-- første del handler om kodekvalitet: testing/tdd og refaktorering
-- presentasjonsrunde (navn, kontor, bakgrunn)
 - Hvorfor tester vi? (5 min)
 - Hva forbinder dere med testing? (5 min)
 
@@ -58,7 +54,7 @@ Note:
 
 ### Testanatomi
 
-```
+```java
 public class WhatWeWantToVerifyTest {
 
     @Test
@@ -221,11 +217,11 @@ Note:
 * @size[0.6em](jest)
 * @size[0.6em](mocha)
 * @size[0.6em](sinon: mock-rammeverk)
-* @size[0.6em](cypress)
+* @size[0.6em](cypress/playwright)
 
 Note:
 - OK, tester er fint, men hvordan jobber vi med tester? 
-- når har dere skrevet tester? før prodkode? etter? mens? 
+- Diskusjon: når har dere skrevet tester? før prodkode? etter? mens? (2 min)
 
 
 ---
@@ -238,20 +234,6 @@ Note:
 - høres enkelt ut, men er en helt annen måte å tenke på 
 - koden blir annerledes enn om du skriver impl.-koden først. 
 - hvorfor? Fordi du må bruke koden selv. Fører til løsere koblet kode
-- Gjort riktig senker det risiko i prosjektet, fordi testene alltid kjøres (du
-  vet om noe knekker)
-
-
----
-
-### TDD setter fokus på design 
-
-Note: 
-- Top down: design før implementasjon, helt ned på detaljnivå for funksjoner
-- Ved å skrive testen først, må du tenke gjennom akseptansekriterier (hva du
-  skal oppnå) før du begynner å kode
-- sammeligne med å tegne huset før du bygger det
-
 
 
 ---?image=https://jfiaffe.files.wordpress.com/2014/09/redgreenrefacor.png&size=35%
@@ -271,7 +253,7 @@ Note:
 
 Note:
 - Å skrive testen først kjennes ut som feil ende å begynne i
-- Test først virker veldig tregt. Har masse av løsningen planlagt i hodet, men
+- Har masse av løsningen planlagt i hodet, men
   en tanke er ikke like gjennomarbeidet som det vi tror. 
 - test først tvinger deg til å lære om domenet og det tekniske du skal lage før
   du lager det
@@ -285,38 +267,24 @@ Note:
 
 Note: 
 - Virkeligheten er kanskje annerledes enn vi trodde, og ved å skrive testen
-  først avsløres dette fortere enn om du skrive masse implemetnasjonskode først
+  først avsløres dette fortere enn om du skrive masse implementasjonskode først
 - Vanskeligere å skrive om når du allerede har gjort mye. 
 
 
 
----
-
-### Testen skal feile
+---?image=https://jfiaffe.files.wordpress.com/2014/09/redgreenrefacor.png&size=35%
 
 Note:
+- testen skal feile
 - Hvis ikke testen feiler, vet du ikke at du tester det du tror du tester
 - Hvis testen er grønn fordi du har gjort en feil i testen, tror du feilaktig at
   du har dekket oppførsel du ønsket å teste
 - Hvis du skriver tester for eksisterende kode, gå inn i koden og ødelegg slik
   at du ser at testen feiler på riktig måte
-
-
----
-
-### Implementer kun nok til å få testen til å kjøre
-
-Note: 
 - Selv om du har ideer om forbedringer, ikke gjør det før testen er grønn
 - Grønn == trygg. Når du har en fungerende implementasjon, kan du lage
-  forbedringer
-
-
---- 
-
-### Forbedringer gjøres når alle testene kjører
-
-Note: 
+  forbedringer. TDD-syklusen hjelper deg å skille ulike deler av arbeidet
+  (design, verifikasjon av første antagelse/korrekthet, forbedring)
 - forbedringer kan gjøres både på testkode og på produksjonskode
 - testkode utgjør lett halvparten av kodebasen! 
 - tester kan bli overflødige, slett dem! 
@@ -355,6 +323,19 @@ Note:
 ---
 
 ### Demo
+
+
+
+---
+
+### TDD setter fokus på design 
+
+Note: 
+- Top down: design før implementasjon, helt ned på detaljnivå for funksjoner
+- Ved å skrive testen først, må du tenke gjennom akseptansekriterier (hva du
+  skal oppnå) før du begynner å kode
+- sammeligne med å tegne huset før du bygger det
+
 
 
 ---
