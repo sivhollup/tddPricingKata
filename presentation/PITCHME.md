@@ -337,6 +337,36 @@ Note:
 - sammeligne med å tegne huset før du bygger det
 
 
+---
+
+### API Design
+
+Note:
+- Ikke begynn å lage API'et med én gang. Tenk over problemstillingen først. 
+  - Hva er formålet til API'et? Hva er det APIet skal løse?
+  - En god diskusjon fører ofte til et bedre API enn det ville vært om man bare hoppet rett i kodingen.
+- Skriv til API'et tidlig - og ofte. Dette tvinger TDD deg til å gjøre.
+- API skal gjøre én ting, og det skal den gjøre bra.
+  - Enkelt å forklare
+  - Lett å navngi. Er det vanskelig å finne et passende navn, er det ofte et tegn på at API'et er for komplisert.
+- Navn burde være selvforklarende, og navngivingen burde være konsistent. Samme ord betyr samme ting.
+- Et API skal være så lite som mulig. "When in doubt, leave it out". 
+  - Det er enkelt å legge til nye momenter i et API, det er vanskelig å fjerne.
+- Ikke være overraskende. API'et skal gjøre nøyaktig det den sier det gjør.
+ - Kort fortalt: Ikke ha uforventede bivirkninger
+ - Det burde også feile fort, og rapportere eventuelle feil så fort som mulig.
+- Til slutt: 
+
+
+---
+
+### Vær konsistente!
+
+Note:
+- I realiteten så hender det ofte at man bryter en del prinsipper ved bra API-design.
+- Et API formes ofte ut fra et behov som må fylles. Over tid så endrer ofte disse behovene seg, og API-et følger ikke alltid helt med.
+- I slike tilfeller er det viktigere å opprettholde de designvalgene som er tatt, og være konsistente. Det gjør det enklere både for andre og for deg selv å ta i bruk API'et.
+- Eventuelt skrive om API'et om det er rom for det.
 
 ---
 
